@@ -5,14 +5,9 @@ while True:
     print("Введите 4 целых числа: ")
     a, b, c, d = int(input()), int(input()), int(input()), int(input())
 
-    a %= 2
-    b %= 2
-    c %= 2
-    d %= 2
-
-    if a == b and b == c and c == d and d == a:
-        print("среди заданных целых чисел НЕТ четного числа")
-    else:
+    if a %2==0 or b %2==0 or c %2==0 or d %2==0:
         print("среди заданных целых чисел ЕСТЬ четное число")
+    else:
+        print("среди заданных целых чисел НЕТ четного числа")
     if input('Do You Want To Continue? ') != 'y':
         break
